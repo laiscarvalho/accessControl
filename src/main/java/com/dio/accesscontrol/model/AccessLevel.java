@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class workingDay {
+public class AccessLevel {
     private long id;
     private String description;
 }
