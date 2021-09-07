@@ -2,10 +2,7 @@ package com.dio.accesscontrol.model;
 
 import lombok.*;
 
-import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -35,7 +32,9 @@ public class Movimentation {
     private LocalDateTime entryDate;
     private LocalDateTime departureDate;
     private BigDecimal period;
+    @ManyToOne
     private Occurrence occurrence;
+    @ManyToOne
     private Callendar callendar;
 
 

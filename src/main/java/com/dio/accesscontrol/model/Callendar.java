@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Getter
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 public class Callendar {
     @Id
     private long id;
+    @ManyToOne
     private DataType dataType;
     private String description;
     private LocalDateTime commemorativeDate;
