@@ -2,6 +2,8 @@ package com.dio.accesscontrol.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 @Getter
@@ -9,9 +11,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Builder
+@Entity
 public class Callendar {
+    @Id
     private long id;
-    private DataType daaType;
+    private DataType dataType;
     private String description;
     private LocalDateTime commemorativeDate;
 

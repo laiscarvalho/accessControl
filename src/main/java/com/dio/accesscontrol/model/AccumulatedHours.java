@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -23,9 +24,9 @@ public class AccumulatedHours {
         private long userId;
         private long accumulatedHoursId;
     }
+    @Id
     @EmbeddedId
     private AccumulatedHoursId id;
-    private UserCategory userCategory;
     private LocalDateTime workingDate;
     private BigDecimal quantityWorkingDays;
     private BigDecimal hoursBalance;
