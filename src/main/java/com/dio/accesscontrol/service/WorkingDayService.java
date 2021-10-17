@@ -17,7 +17,7 @@ public class WorkingDayService {
     WorkingDayRepository  workingDayRepository;
     @Autowired
     public  WorkingDayService(WorkingDayRepository workingDayRepository){
-        this.workingDayRepository =workingDayRepository;
+        this.workingDayRepository = workingDayRepository;
     }
 
     public WorkingDay saveWorkingDay(WorkingDay workingDay){
