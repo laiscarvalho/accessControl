@@ -40,6 +40,4 @@ public class WorkingDayService {
          workingDayRepository.deleteById(id);
     }
 
-
-
 }

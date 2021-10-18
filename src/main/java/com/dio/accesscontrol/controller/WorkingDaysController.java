@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/workingDays")
-public class workingDaysController {
+public class WorkingDaysController {
 
     @Autowired
     WorkingDayService workingDayService;
@@ -38,10 +38,13 @@ public class workingDaysController {
     }
 
     @DeleteMapping("/{idWorkingDay}")
-    public ResponseEntity<WorkingDay> deleteWorkingDayById(@PathVariable("idWorkingDay") long idWorkingDay) {
-       workingDayService.deleteWorkingDay(idWorkingDay);
-        return (ResponseEntity<WorkingDay>) ResponseEntity.noContent();
+    public HttpStatus deleteWorkingDayById(@PathVariable("idWorkingDay") long idWorkingDay) {
+      try {
+          workingDayService.deleteWorkingDay(idWorkingDay);
+      }catch (Exception e){
+          System.out.println(e.getMessage());
+      }
+        return HttpStatus.OK;
     }
-
 
 }
